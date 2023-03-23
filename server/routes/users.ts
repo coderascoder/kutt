@@ -24,4 +24,12 @@ router.post(
   asyncHandler(user.remove)
 );
 
+router.get(
+  "/admin/all-users",
+  asyncHandler(auth.apikey),
+  asyncHandler(auth.jwt),
+  asyncHandler(auth.admin),
+  asyncHandler(user.get)
+);
+
 export default router;
