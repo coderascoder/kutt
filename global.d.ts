@@ -22,6 +22,7 @@ interface User {
   verification_expires?: string;
   verification_token?: string;
   verified?: boolean;
+  isAdmin?: boolean;
 }
 
 interface UserJoined extends User {
